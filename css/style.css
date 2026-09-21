@@ -1,15 +1,19 @@
 @font-face {
   font-family: "CustomFont";
-  src: url("fonty/PROPAGAN.ttf");
+  src: url("../fonty/PROPAGAN.ttf");
+}
+
+* {
+  cursor: url("../obrazky/cropped-image.png"), auto;
 }
 
 html {
-  background: url("pozadi/pozadi2.jpg");
+  background: url("../obrazky/pozadi/pozadi2.jpg");
   font-family: "CustomFont", sans-serif;
 }
 
 body {
-  background-image: url(pozadi/pozadi.jpg);
+  background-image: url("../obrazky/pozadi/pozadi.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -35,7 +39,7 @@ aside {
     padding: 0;
 
     li {
-      background-image: url("bannery/drevo-banner.gif");
+      background-image: url("../obrazky/bannery/drevo-banner.gif");
       background-repeat: no-repeat;
       background-clip: border-box;
       background-size: 100% 100%;
@@ -68,7 +72,7 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
-    background-image: url("bannery/drevo-banner.gif");
+    background-image: url("../obrazky/bannery/drevo-banner.gif");
   }
 }
 
@@ -85,6 +89,20 @@ footer {
   font-size: 0.8rem;
   margin-top: 2rem;
   padding-inline: 2rem;
+}
+
+hr {
+  background-image: url("../obrazky/oddelovace/provaz.gif");
+  height: 38px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+  background-size: 100%;
+  border: 0;
+}
+
+button:hover, a:hover, link:hover, input:hover {
+  cursor: url("../obrazky/piva/bier-beer.gif"), pointer;
 }
 
 .flex {
@@ -109,15 +127,7 @@ footer {
   padding: 1rem;
 }
 
-hr {
-  background-image: url("oddelovace/provaz.gif");
-  height: 38px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-clip: content-box;
-  background-size: 100%;
-  border: 0;
-}
+
 
 @media screen and (max-width: 956px) {
   header {

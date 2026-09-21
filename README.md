@@ -1,0 +1,14 @@
+### Struktura projektu
+- /foobar.com
+- /css
+- /js
+- /images
+- /html (stranky, podstranky)
+    - /news
+        - /news_content
+            - fizz.html
+            - buzz.html
+        - news.html
+    - about.html
+    - contact.html
+- index.html 
