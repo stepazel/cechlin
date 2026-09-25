@@ -39,15 +39,58 @@ aside {
     padding: 0;
 
     li {
-      background-image: url("../obrazky/bannery/drevo-banner.gif");
+      background-image: url("../obrazky/oddelovace/sipka.png");
       background-repeat: no-repeat;
       background-clip: border-box;
       background-size: 100% 100%;
-      padding: 1rem;
-      margin: 1rem;
+      background-position-y: 5px;
+      width: 100%;
+      display: flex;
+      padding: 1rem 0;
+      text-align: center;
+      min-height: 75px;
+      align-items: center;
+      justify-content: center;
 
       a {
-        padding-left: 12px;
+        text-decoration: none;
+        font-size: 1rem;
+        color: #6e1515;
+      }
+
+      &:nth-child(1) {
+        background-image: url("../obrazky/oddelovace/sipka.png");
+        transform: rotate(15deg);
+      }
+      &:nth-child(3) {
+        background-image: url("../obrazky/oddelovace/sipka-otocena.png");
+        background-position-y: -4px;
+        transform: rotate(342deg);
+      }
+      &:nth-child(4) {
+        background-image: url("../obrazky/oddelovace/sipka.png");
+        transform: rotate(1deg);
+      }
+      &:nth-child(5) {
+        background-image: url("../obrazky/oddelovace/sipka-otocena.png");
+        background-position-y: -4px;
+        transform: rotate(13deg);
+      }
+
+      &:hover {
+        &:nth-child(1) {
+          transform: rotate(15deg) scale(1.1);
+        }
+        &:nth-child(3) {
+          transform: rotate(342deg) scale(1.1);
+        }
+        &:nth-child(4) {
+          transform: rotate(1deg) scale(1.1);
+        }
+        &:nth-child(5) {
+          transform: rotate(13deg) scale(1.1);
+        }
+        transform: scale(1.1);
       }
     }
   }
@@ -55,6 +98,10 @@ aside {
   .image-container {
     width: 50px;
     height: auto;
+  }
+
+  > * {
+    position: relative;
   }
 }
 
@@ -101,7 +148,10 @@ hr {
   border: 0;
 }
 
-button:hover, a:hover, link:hover, input:hover {
+button:hover,
+a:hover,
+link:hover,
+input:hover {
   cursor: url("../obrazky/piva/bier-beer.gif"), pointer;
 }
 
@@ -126,8 +176,6 @@ button:hover, a:hover, link:hover, input:hover {
 .content-container {
   padding: 1rem;
 }
-
-
 
 @media screen and (max-width: 956px) {
   header {
