@@ -1,0 +1,12 @@
+.kapela {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+
+.clen {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
