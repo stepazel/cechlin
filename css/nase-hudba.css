@@ -1,0 +1,30 @@
+ul,
+li {
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+li a img {
+    width: 20px;
+    height: 20px;
+
+}
+
+img {
+    width: 80px;
+}
+
+
+.albums {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media ( max-width: 750px) {
+    .albums {
+        grid-template-columns: 1fr;
+    }
+    
+}
