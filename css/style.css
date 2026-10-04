@@ -32,7 +32,9 @@ img {
   height: auto;
 }
 
-aside {
+aside#main-nav {
+  display: block;
+
   ul {
     font-size: 22px;
     list-style: none;
@@ -173,6 +175,58 @@ input:hover {
   }
 }
 
+button.open-nav-button {
+  all: unset;
+  background-image: url(../obrazky/pozadi/list.png);
+  display: none;
+  background-size: 100px 100px;
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+
+  #list {
+    display: grid;
+    justify-items: center;
+    color: #0d740d;
+    -webkit-text-stroke: 1px #122502;
+  }
+}
+
+aside#mobile-nav {
+  background-image: url("../obrazky/pozadi/pozadi3.jpg");
+  display: none;
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+
+  nav {
+    height: 100vh;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      text-align: center;
+
+      a {
+        color: black;
+        text-decoration: none;
+        font-size: 2rem;
+
+      }
+
+    }
+  }
+}
+
 .content-container {
   padding: 1rem;
 }
@@ -198,7 +252,7 @@ input:hover {
         font-size: 16px;
 
         li {
-          padding: 8px;
+          padding: 16px;
         }
       }
     }
@@ -209,8 +263,20 @@ input:hover {
     margin-top: 0;
   }
 
-  .content-container {
-    padding: 0 2rem;
+  aside#mobile-nav {
+    display: block;
+  }
+
+  aside#main-nav {
+    display: none;
+  }
+
+  button.open-nav-button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    display: block;
   }
 }
 

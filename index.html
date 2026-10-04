@@ -2,76 +2,101 @@
 <html lang="cs">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Čechhlín Web</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js"></script>
+  <title>Čechhlín Web</title>
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <h1>Čechhlín Singers</h1>
-        </div>
-    </header>
-    <hr>
-    <main>
-        <aside class="flex flex-column">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="html/o-nas.html">O nás</a>
-                    </li>
-                    <li>
-                        <a href="html/hudba.html">Naše hudba</a>
-                    </li>
-                    <li>
-                        <a href="html/zpevnik.html">Náš zpěvník</a>
-                    </li>
-                    <li>
-                        <a href="html/fotky.html">Fotky nás</a>
-                    </li>
-                    <li>
-                        <a href="html/koncerty.html">Naše hraní</a>
-                    </li>
-                    <li>
-                        <a href="html/kniha-navstev.html">Kniha návštěv</a>
-                    </li>
-                </ul>
-            </nav>
-                
-            <div class="flex flex-row flex-center">
-                <div class="image-container">
-                    <img src="obrazky/piva/pivo-tuk.gif" alt="pivo">
-                </div>
-                <div class="image-container">
-                    <img src="obrazky/nástroje/kytara-spanelka.webp" alt="kytara">
-                </div>
-            </div>
-        </aside>
-        <div class="content-container">
-            <img src="obrazky/cechlin.png" alt="Čechhlín Singers" />
+<header>
+  <div class="header-container">
+    <h1>Čechhlín Singers</h1>
+  </div>
+</header>
+<hr>
+<main>
+  <aside class="flex flex-column" id="main-nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="html/o-nas.html">O nás</a>
+        </li>
+        <li>
+          <a href="html/hudba.html">Naše hudba</a>
+        </li>
+        <li>
+          <a href="html/zpevnik.html">Náš zpěvník</a>
+        </li>
+        <li>
+          <a href="html/fotky.html">Fotky nás</a>
+        </li>
+        <li>
+          <a href="html/koncerty.html">Naše hraní</a>
+        </li>
+        <li>
+          <a href="html/kniha-navstev.html">Kniha návštěv</a>
+        </li>
+      </ul>
+    </nav>
 
-            <hr />
+    <div class="flex flex-row flex-center">
+      <div class="image-container">
+        <img src="obrazky/piva/pivo-tuk.gif" alt="pivo">
+      </div>
+      <div class="image-container">
+        <img src="obrazky/nástroje/kytara-spanelka.webp" alt="kytara">
+      </div>
+    </div>
+  </aside>
+  <aside id="mobile-nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="html/o-nas.html">O nás</a>
+        </li>
+        <li>
+          <a href="html/hudba.html">Naše hudba</a>
+        </li>
+        <li>
+          <a href="html/zpevnik.html">Náš zpěvník</a>
+        </li>
+        <li>
+          <a href="html/fotky.html">Fotky nás</a>
+        </li>
+        <li>
+          <a href="html/koncerty.html">Naše hraní</a>
+        </li>
+        <li>
+          <a href="html/kniha-navstev.html">Kniha návštěv</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <div class="content-container">
+    <img src="obrazky/cechlin.png" alt="Čechhlín Singers"/>
 
-            <section>
-                <h2>Ahoj! </h2>
-                <span>Nacházíš se na webových stránkách kapely Čechlín Singers!</span>
-                <div class="flex flex-row">
-                    <p>Momentálně jsou ve výstavbě.
-                        <img src="obrazky/under-construciton.gif" alt="Under Construction" style="max-width: 60px;">
-                    </p>
+    <hr/>
 
-                </div>
-                CO zbývá udělat: <br>
-                <ul>
-                    <li>Naše hudba (odkazy na Spotify, Youtube, vložené mp3)</li>
-                    <li>Náš zpěvník (PDFko + odkaz na Songbook)</li>
-                    <li>Fotky nás (prozatím pár fotek s popiskem)</li>
-                    <li>Naše hraní (seznam konciku, datum, misto, prip. odkaz na udalost)</li>
-                    <li>Kniha návštěv (formulář, server bude potřeba, ale staci bez auth, max. cors)</li>
-                </ul>
-                <span>
+    <section>
+      <h2>Ahoj! </h2>
+      <span>Nacházíš se na webových stránkách kapely Čechlín Singers!</span>
+      <div class="flex flex-row">
+        <p>Momentálně jsou ve výstavbě.
+          <img src="obrazky/under-construciton.gif" alt="Under Construction" style="max-width: 60px;">
+        </p>
+
+      </div>
+      CO zbývá udělat: <br>
+      <ul>
+        <li>Naše hudba (odkazy na Spotify, Youtube, vložené mp3)</li>
+        <li>Náš zpěvník (PDFko + odkaz na Songbook)</li>
+        <li>Fotky nás (prozatím pár fotek s popiskem)</li>
+        <li>Naše hraní (seznam konciku, datum, misto, prip. odkaz na udalost)</li>
+        <li>Kniha návštěv (formulář, server bude potřeba, ale staci bez auth, max. cors)</li>
+      </ul>
+      <span>
                     Rád bych tu měl na výzdobu hezké pozadí, zábavné ikonky a gify jako pivo, kytara, banjo, noty, klobouk.
                     Navigace bude rozcestník. Při kliknutí na něco by mohl zaznít random zvuk jako ťuknutí si pivkem, akord,
                     vyhrávka, fouk do lahváče, harmonika.
@@ -79,15 +104,17 @@
                     Na jedné straně byl tedy ten rozcestník. Na druhé třeba random fotky z galerie a nad nimi nadcházející akce či
                     dvě.
                 </span>
-            </section>
-        </div>
-        
-    </main>
+    </section>
+  </div>
+  <button class="open-nav-button" onclick="toggleNav()">
+    <span id="list">Kompas</span>
+  </button>
+</main>
 
-    <footer>
-        Kapela Čechhlín Singers je chraněnou krajinnou kapelou mikroregionu Hlinecko, zapsána roku 2024, kdy vyprodala
-        Orlovnu.
-    </footer>
+<footer>
+  Kapela Čechhlín Singers je chraněnou krajinnou kapelou mikroregionu Hlinecko, zapsána roku 2024, kdy vyprodala
+  Orlovnu.
+</footer>
 </body>
 
 </html>
