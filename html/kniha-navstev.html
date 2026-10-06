@@ -1,13 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
   <script src="../js/script.js"></script>
   <title>Kniha návštěv</title>
+  <link rel="stylesheet" href="../css/kniha-navstev.css">
 </head>
+
 <body>
+  <header>
+    <div class="header-container">
+      <h1>Kniha návštěv</h1>
+    </div>
+  </header>
+  <hr>
+  <main>
+    <aside class="flex flex-column" id="main-nav">
+      <nav>
+        <ul>
+          <li>
+            <a href="o-nas.html">O nás</a>
+          </li>
+          <li>
+            <a href="hudba.html">Naše hudba</a>
+          </li>
+          <li>
+            <a href="zpevnik.html">Náš zpěvník</a>
+          </li>
+          <li>
+            <a href="fotky.html">Fotky nás</a>
+          </li>
+          <li>
+            <a href="koncerty.html">Naše hraní</a>
+          </li>
+          <li>
+            <a href="kniha-navstev.html">Kniha návštěv</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="flex flex-row flex-center">
+        <div class="image-container">
+          <img src="../obrazky/piva/pivo-tuk.gif" alt="pivo">
+        </div>
+        <div class="image-container">
+          <img src="../obrazky/nástroje/kytara-spanelka.webp" alt="kytara">
+        </div>
+      </div>
+    </aside>
+
+    <aside id="mobile-nav">
+      <nav>
+        <ul>
+          <li>
+            <a href="o-nas.html">O nás</a>
+          </li>
+          <li>
+            <a href="hudba.html">Naše hudba</a>
+          </li>
+          <li>
+            <a href="zpevnik.html">Náš zpěvník</a>
+          </li>
+          <li>
+            <a href="fotky.html">Fotky nás</a>
+          </li>
+          <li>
+            <a href="koncerty.html">Naše hraní</a>
+          </li>
+          <li>
+            <a href="kniha-navstev.html">Kniha návštěv</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+
+    <div class="content-container">
+      <section>
+        <p>Zde nám můžeš napsat, co se ti na naší kapele a naší stránce líbilo.</p>
+        <form>
+
+          <label>
+            Tvoje jméno / přezdívka
+            <input type="text" name="jmeno" placeholder="Tramp Kamil" />
+          </label>
+
+          <label>
+            Napiš nám vzkaz
+            <textarea name="vzkaz" placeholder="Jste nejlepší..." rows="4" cols="23"></textarea>
+          </label>
+
+          <input type="submit" value="Poslat vzkaz" />
+        </form>
+      </section>
+    </div>
+    <button class="open-nav-button" onclick="toggleNav()">
+      <span id="list">Kompas</span>
+    </button>
 
 </body>
+</main>
+
+
 </html>
