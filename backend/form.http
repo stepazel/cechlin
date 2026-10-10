@@ -1,0 +1,10 @@
+GET localhost:8080/messages
+
+
+
+###
+POST localhost:8080/message
+Content-Type: application/x-www-form-urlencoded
+
+name=Tramp Někdo další &
+message=Ahoj klucíí, jste fakt super, chodím na každý vás koncert. Pokračujte v tom, co děláte.

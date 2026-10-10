@@ -77,23 +77,22 @@
       </nav>
     </aside>
 
+    <h1>Server funguje. Jen musim poresit ten submit. Aby se idealne refreshla page. A pak pridat get tech messages</h1>
 
     <div class="content-container">
       <section>
         <p>Zde nám můžeš napsat, co se ti na naší kapele a naší stránce líbilo.</p>
-        <form>
-
+        <form action="http://localhost:8080/message" target="_blank" method="post">
           <label>
             Tvoje jméno / přezdívka
-            <input type="text" name="jmeno" placeholder="Tramp Kamil" />
+            <input type="text" name="name" placeholder="Tramp Kamil" />
           </label>
 
           <label>
             Napiš nám vzkaz
-            <textarea name="vzkaz" placeholder="Jste nejlepší..." rows="4" cols="23"></textarea>
+            <textarea name="message" placeholder="Jste nejlepší..." rows="4" cols="23"></textarea>
           </label>
-
-          <input type="submit" value="Poslat vzkaz" />
+          <button type="submit">Poslat vzkaz</button>
         </form>
       </section>
     </div>
