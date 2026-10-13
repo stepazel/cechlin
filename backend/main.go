@@ -16,10 +16,6 @@ type Message struct {
 	DateCreated string `json:"date_created"`
 }
 
-type MessageResponse struct {
-	Messages []Message `json:"messages"`
-}
-
 func main() {
 	db, err := sql.Open("sqlite", "db.sqlite")
 	if err != nil {
@@ -49,7 +45,6 @@ func main() {
 		if rowsErr != nil {
 			fmt.Println(rowsErr)
 		}
-
 		var messages []Message
 
 		for rows.Next() {
@@ -59,13 +54,13 @@ func main() {
 			}
 			messages = append(messages, message)
 		}
-		w.Header().Set("Content-Type", "application/json")
-		w.WriteHeader(http.StatusOK)
 		w.Header().Set("Access-Control-Allow-Origin", "*")
 		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
+		w.Header().Set("Access-Control-Allow-Methods", "GET, OPTIONS")
+		w.Header().Set("Content-Type", "application/json")
+		w.WriteHeader(http.StatusOK)
 
-		var response = MessageResponse{messages}
-		if err := json.NewEncoder(w).Encode(response); err != nil {
+		if err := json.NewEncoder(w).Encode(messages); err != nil {
 			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}

@@ -1,6 +1,7 @@
 @font-face {
   font-family: "CustomFont";
-  src: url("../fonty/PROPAGAN.ttf");
+  src: url("../fonty/PROPAGAN.ttf") format("truetype");
+    unicode-range: U+0000-002F, U+003A-10FFFF;
 }
 
 * {
@@ -64,15 +65,18 @@ aside#main-nav {
         background-image: url("../obrazky/oddelovace/sipka.png");
         transform: rotate(15deg);
       }
+
       &:nth-child(3) {
         background-image: url("../obrazky/oddelovace/sipka-otocena.png");
         background-position-y: -4px;
         transform: rotate(342deg);
       }
+
       &:nth-child(4) {
         background-image: url("../obrazky/oddelovace/sipka.png");
         transform: rotate(1deg);
       }
+
       &:nth-child(5) {
         background-image: url("../obrazky/oddelovace/sipka-otocena.png");
         background-position-y: -4px;
@@ -83,15 +87,19 @@ aside#main-nav {
         &:nth-child(1) {
           transform: rotate(15deg) scale(1.1);
         }
+
         &:nth-child(3) {
           transform: rotate(342deg) scale(1.1);
         }
+
         &:nth-child(4) {
           transform: rotate(1deg) scale(1.1);
         }
+
         &:nth-child(5) {
           transform: rotate(13deg) scale(1.1);
         }
+
         transform: scale(1.1);
       }
     }
@@ -102,7 +110,7 @@ aside#main-nav {
     height: auto;
   }
 
-  > * {
+  >* {
     position: relative;
   }
 }
@@ -195,14 +203,21 @@ button.open-nav-button {
 aside#mobile-nav {
   background-image: url("../obrazky/pozadi/pozadi3.jpg");
   display: none;
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
+  height: 100%;
+  /* 100% Full-height */
+  width: 0;
+  /* 0 width - change this with JavaScript */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Stay on top */
+  top: 0;
+  /* Stay at the top */
   left: 0;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  overflow-x: hidden;
+  /* Disable horizontal scroll */
+  transition: 0.5s;
+  /* 0.5 second transition effect to slide in the sidenav */
 
   nav {
     height: 100vh;

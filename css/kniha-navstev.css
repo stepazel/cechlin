@@ -14,3 +14,11 @@ label {
 input[type=submit] {
     padding: 4px;
 }
+
+#messages div {
+    border-bottom: 5px solid brown;
+}
+
+.datum {
+    font-family: sans-serif;
+}
