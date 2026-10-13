@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/script.js"></script>
+  <script defer src="../js/script.js"></script>
   <title>Kniha návštěv</title>
   <link rel="stylesheet" href="../css/kniha-navstev.css">
 </head>
@@ -77,12 +77,11 @@
       </nav>
     </aside>
 
-    <h1>Server funguje. Jen musim poresit ten submit. Aby se idealne refreshla page. A pak pridat get tech messages</h1>
 
     <div class="content-container">
       <section>
         <p>Zde nám můžeš napsat, co se ti na naší kapele a naší stránce líbilo.</p>
-        <form action="http://localhost:8080/message" target="_blank" method="post">
+        <form id="message-form" action="http://localhost:8080/message" method="post">
           <label>
             Tvoje jméno / přezdívka
             <input type="text" name="name" placeholder="Tramp Kamil" />
@@ -92,7 +91,9 @@
             Napiš nám vzkaz
             <textarea name="message" placeholder="Jste nejlepší..." rows="4" cols="23"></textarea>
           </label>
-          <button type="submit">Poslat vzkaz</button>
+
+          <button name="poslat">Poslat vzkaz</button>
+
         </form>
       </section>
     </div>

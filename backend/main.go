@@ -40,6 +40,8 @@ func main() {
 		if dbInsertErr != nil {
 			fmt.Println(dbInsertErr)
 		}
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 	})
 
 	http.HandleFunc("/messages", func(w http.ResponseWriter, r *http.Request) {
@@ -59,6 +61,8 @@ func main() {
 		}
 		w.Header().Set("Content-Type", "application/json")
 		w.WriteHeader(http.StatusOK)
+		w.Header().Set("Access-Control-Allow-Origin", "*")
+		w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 
 		var response = MessageResponse{messages}
 		if err := json.NewEncoder(w).Encode(response); err != nil {
