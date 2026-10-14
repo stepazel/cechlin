@@ -3,6 +3,7 @@ async function loadMessages() {
 
 	try {
 		const response = await fetch("https://cechhlin.cz/api/messages", {
+		// const response = await fetch("http://localhost:8080/messages", {
 			method: "GET",
 		})
 		const messages = await response.json()
@@ -23,4 +24,27 @@ async function loadMessages() {
 }
 
 
-await loadMessages();
+loadMessages();
+
+
+const form = document.getElementById("message-form");
+
+form.addEventListener("submit", async (event) => {
+	event.preventDefault();
+	const formData = new FormData(form);
+
+	try {
+		await fetch("https://cechhlin.cz/api/message", {
+			method: "POST",
+			body: new URLSearchParams({
+				name: formData.get('name'),
+				message: formData.get('message'),
+			})
+		});
+		form.reset();
+		window.location.reload();
+	} catch (e) {
+		alert("Chyba při odesílání zprávy. Kontaktujte správce");
+		console.error(e);
+	}
+});

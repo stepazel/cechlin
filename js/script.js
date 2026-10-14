@@ -3,26 +3,40 @@ function toggleNav() {
 	nav.style.width === "100%" ? nav.style.width = "0" : nav.style.width = "100%";
 }
 
-const form = document.getElementById("message-form");
+const num = Math.floor(Math.random() * 6) + 1;
+const zvuk = new Audio(`../zvuky/${num}.mp3`);
+let cekajiciOdkaz = null;
 
-form.addEventListener("submit", async (event) => {
-	event.preventDefault();
-	const formData = new FormData(form);
-
-	try {
-		await fetch("https://cechhlin.cz/api/message", {
-			method: "POST",
-			body: new URLSearchParams({
-				name: formData.get('name'),
-				message: formData.get('message'),
-			})
-		});
-		form.reset();
-		window.location.reload();
-	} catch (e) {
-		alert("Chyba při odesílání zprávy. Kontaktujte správce");
-		console.error(e);
+zvuk.addEventListener("ended", () => {
+	if (cekajiciOdkaz) {
+		const adresa = cekajiciOdkaz;
+		cekajiciOdkaz = null;
+		window.location.href = adresa;
 	}
 });
 
+
+document.addEventListener("click", (event) => {
+	const odkaz = event.target.closest("a[href]");
+	if (
+		!odkaz ||
+		event.button !== 0 ||
+		event.ctrlKey ||
+		event.metaKey ||
+		event.shiftKey ||
+		event.altKey
+	) return;
+
+	event.preventDefault();
+	cekajiciOdkaz = odkaz.href;
+
+	zvuk.pause();
+	zvuk.currentTime = 0;
+
+	zvuk.play().catch(() => {
+		const adresa = cekajiciOdkaz;
+		cekajiciOdkaz = null;
+		window.location.href = adresa;
+	});
+});
 
