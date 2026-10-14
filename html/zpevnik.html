@@ -7,7 +7,99 @@
   <script src="../js/script.js"></script>
   <title>Zpěvník</title>
 </head>
-<body>
 
+<body>
+<header>
+  <div class="header-container">
+    <h1>Zpěvníky pro hraní</h1>
+  </div>
+</header>
+<hr>
+<main>
+  <aside class="flex flex-column" id="main-nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="o-nas.html">O nás</a>
+        </li>
+        <li>
+          <a href="hudba.html">Naše hudba</a>
+        </li>
+        <li>
+          <a href="zpevnik.html">Náš zpěvník</a>
+        </li>
+        <li>
+          <a href="fotky.html">Fotky nás</a>
+        </li>
+        <li>
+          <a href="koncerty.html">Naše hraní</a>
+        </li>
+        <li>
+          <a href="kniha-navstev.html">Kniha návštěv</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="flex flex-row flex-center">
+      <div class="image-container">
+        <img src="../obrazky/piva/pivo-tuk.gif" alt="pivo">
+      </div>
+      <div class="image-container">
+        <img src="../obrazky/nástroje/kytara-spanelka.webp" alt="kytara">
+      </div>
+    </div>
+  </aside>
+  <aside id="mobile-nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="o-nas.html">O nás</a>
+        </li>
+        <li>
+          <a href="hudba.html">Naše hudba</a>
+        </li>
+        <li>
+          <a href="zpevnik.html">Náš zpěvník</a>
+        </li>
+        <li>
+          <a href="fotky.html">Fotky nás</a>
+        </li>
+        <li>
+          <a href="koncerty.html">Naše hraní</a>
+        </li>
+        <li>
+          <a href="kniha-navstev.html">Kniha návštěv</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
+  <div class="content-container">
+    <section>
+      <h1>Ahoj kamarádi!</h1>
+      <p>
+        Na osadě je zvykem si posílat zpěvníky, aby každý si mohl zahrát písničku, která právě zní osadou.
+      </p>
+      <p>
+        A na této stránce si můžete stáhnout a vytisknout naše zpěvníky s písničkami z alb Deset deka Čechhlínů a Mechy
+        se zahojí.
+      </p>
+      <p>
+        V budoucnosti pro Vás připravujeme i online zpěvník, který bude více funkcionální než pouhé PDF.
+      </p>
+    </section>
+    <hr/>
+    <section>
+      <h3>Deset deka Čechhlínů</h3>
+      <a href="../pdf/Deset-deka-Čechhlínů-zpěvník.pdf" download>Stáhnout - Deset deka Čechhlínů</a>
+    </section>
+    <section>
+      <h3>Mechy se zahojí</h3>
+      <a href="../pdf/Mechy-se-zahojí.pdf" download>Stáhnout - Mechy se zahojí</a>
+    </section>
+  </div>
+  <button class="open-nav-button" onclick="toggleNav()">
+    <span id="list">Kompas</span>
+  </button>
+</main>
 </body>
 </html>
