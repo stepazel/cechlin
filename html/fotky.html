@@ -1,13 +1,86 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css">
-  <script src="../js/script.js"></script>
+  <link rel="stylesheet" href="../css/fotky.css">
+  <script defer src="../js/fotky.js"></script>
   <title>Fotky nás</title>
 </head>
+
 <body>
 
+  <header>
+    <div class="header-container">
+      <h1>Fotky nás</h1>
+    </div>
+  </header>
+  <hr>
+
+  <main>
+
+      <aside class="flex flex-column" id="main-nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="o-nas.html">O nás</a>
+        </li>
+        <li>
+          <a href="hudba.html">Naše hudba</a>
+        </li>
+        <li>
+          <a href="zpevnik.html">Náš zpěvník</a>
+        </li>
+        <li>
+          <a href="fotky.html">Fotky nás</a>
+        </li>
+
+        <li>
+          <a href="kniha-navstev.html">Kniha návštěv</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="flex flex-row flex-center">
+      <div class="image-container">
+        <img src="../obrazky/piva/pivo-tuk.gif" alt="pivo">
+      </div>
+      <div class="image-container">
+        <img src="../obrazky/nástroje/kytara-spanelka.webp" alt="kytara">
+      </div>
+    </div>
+  </aside>
+  <aside id="mobile-nav">
+    <nav>
+      <ul>
+        <li>
+          <a href="o-nas.html">O nás</a>
+        </li>
+        <li>
+          <a href="hudba.html">Naše hudba</a>
+        </li>
+        <li>
+          <a href="zpevnik.html">Náš zpěvník</a>
+        </li>
+        <li>
+          <a href="fotky.html">Fotky nás</a>
+        </li>
+        <li>
+          <a href="kniha-navstev.html">Kniha návštěv</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+  <section class="content-container" id="gallery">
+
+  </section>
+
+    <button class="open-nav-button" onclick="toggleNav()">
+    <span id="list">Kompas</span>
+  </button>
+  </main>
+
 </body>
+
 </html>
