@@ -21,6 +21,7 @@ indent_style = tab
 
 [{*.cjs,*.es6,*.js,*.mjs}]
 indent_style = tab
+spaces=2
 
 [{*.htm,*.html,*.sht,*.shtm,*.shtml}]
 indent_size = 2
