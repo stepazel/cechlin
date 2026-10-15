@@ -1,7 +1,7 @@
 @font-face {
   font-family: "CustomFont";
   src: url("../fonty/PROPAGAN.ttf") format("truetype");
-    unicode-range: U+0000-002F, U+003A-10FFFF;
+  unicode-range: U+0000-002F, U+003A-10FFFF;
 }
 
 * {
@@ -34,7 +34,41 @@ img {
 }
 
 aside#main-nav {
+  position: relative;
+
+  .tyc {
+    position: absolute;
+    top: 0;
+    left: 45%;
+    width: 24px;
+    height: 680px;
+    background-color: #8f562d;
+    background-image:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.2), transparent, rgba(0, 0, 0, 0.4)),
+      repeating-linear-gradient(90deg, transparent, transparent 4px, rgba(0, 0, 0, 0.05) 4px, rgba(0, 0, 0, 0.05) 8px);
+    border-radius: 4px;
+    box-shadow: 3px 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  }
+
+  .zem {
+    width: 100%;
+    height: 50px;
+    background-color: #138113;
+    position: absolute;
+    border-radius: 59%;
+    top: 60%;
+    z-index: 1;
+    box-shadow: 0px 6px 6px #291313;
+    background: #2a8730;
+    background: linear-gradient(90deg, rgb(49 107 52) 0%, rgba(94, 199, 87, 1) 50%, rgba(52, 107, 57, 1) 100%);
+  }
+
   display: block;
+
+  nav {
+    z-index: 3;
+  }
 
   ul {
     font-size: 22px;
@@ -51,7 +85,7 @@ aside#main-nav {
       display: flex;
       padding: 1rem 0;
       text-align: center;
-      min-height: 75px;
+      min-height: 65px;
       align-items: center;
       justify-content: center;
 
@@ -63,13 +97,13 @@ aside#main-nav {
 
       &:nth-child(1) {
         background-image: url("../obrazky/oddelovace/sipka.png");
-        transform: rotate(15deg);
+        transform: rotate(6deg);
       }
 
       &:nth-child(3) {
         background-image: url("../obrazky/oddelovace/sipka-otocena.png");
         background-position-y: -4px;
-        transform: rotate(342deg);
+        transform: rotate(352deg);
       }
 
       &:nth-child(4) {
@@ -80,7 +114,7 @@ aside#main-nav {
       &:nth-child(5) {
         background-image: url("../obrazky/oddelovace/sipka-otocena.png");
         background-position-y: -4px;
-        transform: rotate(13deg);
+        transform: rotate(6deg);
       }
 
       &:hover {
@@ -110,7 +144,7 @@ aside#main-nav {
     height: auto;
   }
 
-  >* {
+  > * {
     position: relative;
   }
 }
@@ -235,9 +269,7 @@ aside#mobile-nav {
         color: black;
         text-decoration: none;
         font-size: 2rem;
-
       }
-
     }
   }
 }
