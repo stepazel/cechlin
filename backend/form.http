@@ -1,8 +1,14 @@
 GET localhost:8080/messages
 
 ###
-GET https://cechhlin.cz/api/messages
+GET https://www.cechhlin.cz/api/messages
 
+###
+POST https://cechhlin.cz/api/message
+Content-Type: application/x-www-form-urlencoded
+
+name=Tramp Štěpán &
+message=Ahoj klucíí, jste fakt super, chodím na každý vás koncert. Pokračujte v tom, co děláte.
 ###
 POST localhost:8080/message
 Content-Type: application/x-www-form-urlencoded

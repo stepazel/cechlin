@@ -9,8 +9,9 @@ async function loadMessages() {
 		const messages = await response.json()
 
 		return messages.forEach(message => {
-			const date = new Date(message.date_created);
-			const dateString = `${date.getDate()}. ${date.getMonth()}. ${date.getFullYear()} v ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+			const dateUtc = new Date(message.date_created + ' UTC');
+			// const dateString = `${date.getDate()}. ${date.getMonth()}. ${date.getFullYear()} v ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+			const dateString = dateUtc.toLocaleString();
 			messagesSection.innerHTML += `
                 <div>
                     <h3>${message.name} | <span class="datum">${dateString}</span></h3>

@@ -19,7 +19,7 @@ document.addEventListener("click", (event) => {
 	const odkaz = event.target.closest("a[href]");
 	if (!odkaz || event.button !== 0 || event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
 
-	console.log(odkaz.hasAttribute("download"));
+	if (odkaz.hasAttribute("download"))
 	{
 		return;
 	}
