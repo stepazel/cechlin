@@ -1,22 +1,21 @@
-  .image-container {
-      width: 350px;
-      height: auto;
-  }
+.image-container {
+  width: 350px;
+  height: auto;
+}
 
+#gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 576px) {
   #gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 
-
-  @media screen and (max-width: 576px) {
-      #gallery {
-          display: grid;
-          grid-template-columns: 1fr;
-      }
-
-      .image-container {
-        width: 250px;
-        height: auto;
-      }
+  .image-container {
+    width: 250px;
+    height: auto;
   }
+}

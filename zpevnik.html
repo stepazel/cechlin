@@ -3,20 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../css/style.css" />
-    <script src="../js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="js/script.js"></script>
     <title>Zpěvník</title>
   </head>
 
   <body>
     <header>
       <div class="header-container">
-        <h1>Zpěvníky pro hraní <img class="gifik" src="../obrazky/piva/tekouci-pivo.webp" /></h1>
+        <h1>Zpěvníky pro hraní <img class="gifik" src="obrazky/piva/tekouci-pivo.webp" /></h1>
       </div>
     </header>
     <hr />
     <main>
       <aside class="flex flex-column" id="main-nav">
+        <div class="tyc"></div>
         <nav>
           <ul>
             <li>
@@ -32,18 +33,15 @@
               <a href="fotky.html">Fotky nás</a>
             </li>
             <li>
+              <a href="koncerty.html">Naše hraní</a>
+            </li>
+            <li>
               <a href="kniha-navstev.html">Kniha návštěv</a>
             </li>
           </ul>
         </nav>
-        <div class="flex flex-row flex-center">
-          <div class="image-container">
-            <img src="../obrazky/piva/pivo-tuk.gif" alt="pivo" />
-          </div>
-          <div class="image-container">
-            <img src="../obrazky/nástroje/kytara-spanelka.webp" alt="kytara" />
-          </div>
-        </div>
+
+        <div class="zem"></div>
       </aside>
       <aside id="mobile-nav">
         <nav>
@@ -59,6 +57,9 @@
             </li>
             <li>
               <a href="fotky.html">Fotky nás</a>
+            </li>
+            <li>
+              <a href="koncerty.html">Naše hraní</a>
             </li>
             <li>
               <a href="kniha-navstev.html">Kniha návštěv</a>
@@ -80,11 +81,11 @@
         <hr />
         <section>
           <h3>Deset deka Čechhlínů</h3>
-          <a href="../pdf/deset-deka-cechhlinu.pdf" download target="_blank">Stáhnout - Deset deka Čechhlínů</a>
+          <a href="pdf/deset-deka-cechhlinu.pdf" download target="_blank">Stáhnout - Deset deka Čechhlínů</a>
         </section>
         <section>
           <h3>Mechy se zahojí</h3>
-          <a href="../pdf/mechy-se-zahoji.pdf" download target="_blank">Stáhnout - Mechy se zahojí</a>
+          <a href="pdf/mechy-se-zahoji.pdf" download target="_blank">Stáhnout - Mechy se zahojí</a>
         </section>
       </div>
       <button class="open-nav-button" onclick="toggleNav()">
